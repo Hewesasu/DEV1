@@ -4,14 +4,12 @@ def validating(input):
         newInput = raw_input("Invalid input, choose between 1-5!\n")
     return int(newInput)
 
-userInput = raw_input("1:Rock, 2:paper, 3:scissors, 4:lizard, 5:spock?\n")
-userInput = validating(userInput)
-
-while userInput > 5 or userInput < 1:
-            userInput = raw_input("Choose between 1-5 for 1:Rock, 2:paper, 3:scissors, 4:lizard, 5:spock\n")
-            userInput = validating(userInput)
+userInput = 0
 
 while userInput != 9:
+
+    userInput = raw_input("Choose between 1-5 to play or choose 9 to quite.\n")
+    userInput = validating(userInput)
 
     from random import randint
     program = randint(1,5)
@@ -71,6 +69,5 @@ while userInput != 9:
             print('User choose "Spock"\nProgram choose "Lizard"\nLizard beats spock, program Wins!')
         elif program == 5:
             print('User choose "Spock"\nProgram choose "Spock"\nDraw!')
-    userInput = raw_input("Choose between 1-5 to play again or choose 9 to quite.\n")
-    userInput = validating(userInput)
+
 
